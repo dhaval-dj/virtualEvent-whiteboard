@@ -1,0 +1,104 @@
+.video-container{
+    
+}
+
+.fullscreen-container{
+     position: absolute;
+    background-color: #000000c2;
+    color: #fff;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    
+}
+#myFullScreenVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.myFullScreenVideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.content {
+ position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    color: #f1f1f1;
+    z-index: 14;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+ 
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.video-image{
+    background-image: url("https://storage.googleapis.com/virtual-event-273009.appspot.com/PRAVEN/WDV2Nov/close.png");
+     background-repeat: no-repeat;
+     zoom: 1.5;
+}
+
+.qna_fullScreen_btn{
+    background-position: -5px -75px; width: 60px; height: 60px;
+}
+.poll_fullScreen_btn{
+    background-position: -5px -5px; width: 60px; height: 60px;
+}
+
+.qna_fullScreen_btn:hover{
+    background-position: -145px -5px; width: 60px; height: 60px; 
+}
+.poll_fullScreen_btn:hover{
+     background-position: -5px -145px; width: 60px; height: 60px;
+}
+
+.poll_selected { 
+    background-position: -75px -5px; width: 60px; height: 60px; 
+}
+
+.qna_selected { 
+    background-position: -75px -75px; width: 60px; height: 60px; 
+    
+}

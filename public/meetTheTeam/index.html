@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Area</title>
+
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="resetbuttonplacer">
+            <div class="resetbtn" onclick="Select('all')" id="reserbtn">RESET</div>
+        </div>
+        <div class="logo">
+            <img src="static/images/logo.png" style="width: 25%;">
+        </div>
+        <div class="sub-divisions">
+            <div class="meet-team-title">
+                <div class="meet-head">Meet the Team</div>
+                <div class="sercharea autocomplete">
+
+                    <input id="myInput" type="text" name="myCountry serch-box" placeholder="Search">
+                    <div class="magnifying-glass">
+                        <img src="static/images/lences.png" alt="" srcset="">
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="sub-division-buttons">
+                <div class="sub-btn" style="background-color: #ff3c5a;" onclick="Select('sales')">
+                    Sales Team
+                </div>
+                <div class="sub-btn" style="background-color: #07bae3;" onclick="Select('marketing')">
+                    Marketing Team
+                </div>
+                <div class="sub-btn" style="background-color: #00bfa0;" onclick="Select('bu')">
+                    BU leaders
+                </div>
+                <div class="sub-btn" style="background-color: #654ea8;" onclick="Select('usa')">
+                    USA Team
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-divisions">
+            <div class="users-pictures">
+
+                <img src="static/images/bu/Anna Rosa Cosi.jpg" class="imgstyle all bu" name="Anna Rosa Cosi"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube=" Anna Rosa Cosi.mp4" team="bu" />
+                <img src="static/images/bu/Fabrice Gellier.jpg" class="imgstyle all bu" name="Fabrice Gellier"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Fabrice Gellier.mp4" team="bu" />
+                <img src="static/images/bu/Ioannis Mesoloras.jpg" class="imgstyle all bu" name="Ioannis Mesoloras"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Ioannis  Mesoloras.mp4" team="bu" />
+                <img src="static/images/bu/Peter Larkin.jpg" class="imgstyle all bu" name="Peter Larkin" team="bu"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Peter Larkin.mp4" />
+                <img src="static/images/bu/Phill Dyson.jpg" class="imgstyle all bu" name="Phill Dyson" team="bu"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Phill Dyson.mp4" />
+                <img src="static/images/bu/Uwe Kemmer.jpg" class="imgstyle all bu" name="Uwe Kemmer" team="bu"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Uwe Kemmer.mp4" />
+
+
+
+                <img src="static/images/marketing/Brad Bennett.jpg" class="imgstyle all marketing" name="Brad Bennett"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Brad Bennett short Bio.mp4"
+                    team="marketing" />
+                <img src="static/images/marketing/Darragh O Toole.jpg" class="imgstyle all marketing"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Darragh Lite.mp4"
+                    name="Darragh O Toole" team="marketing" />
+                <img src="static/images/marketing/Gerry Edwards.jpg" class="imgstyle all marketing" name="Gerry Edwards"
+                    data-toggle="modal" data-target="#exampleModalCenter"
+                    youTube="Gerry Edwards_s Personal Room 2020-10-16-14-20-39.mp4" team="marketing" />
+                <img src="static/images/marketing/Joanna D Argent.jpg" class="imgstyle all marketing"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Joanna .mp4" name="Joanna D Argent"
+                    team="marketing" />
+                <img src="static/images/marketing/Kalima Toubal.jpg" class="imgstyle all marketing" name="Kalima Toubal"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube=" Kalima Toubal.mp4"
+                    team="marketing" />
+                <img src="static/images/marketing/Miriam Franke.jpg" class="imgstyle all marketing" name="Miriam Franke"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Miriam Franke.mp4"
+                    team="marketing" />
+                <img src="static/images/marketing/Olga Kozlova.jpg" class="imgstyle all marketing" name="Olga Kozlova"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Olga Kozlova.mp4" team="marketing" />
+                <img src="static/images/marketing/Ruben Dennenwaldt.jpg" class="imgstyle all marketing"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Ruben Dennenwaldt.mp4"
+                    name="Ruben Dennenwaldt" team="marketing" />
+
+
+
+                <img src="static/images/sales/Alex O Connor.jpg" class="imgstyle all sales" name="Alex O Connor"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Alex O_Connor V3.mp4" team="sales" />
+                <img src="static/images/sales/Andrey Tischenko.jpg" class="imgstyle all sales" name="Andrey Tischenko"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube=" Andrey Tischenko.mp4"
+                    team="sales" />
+                <img src="static/images/sales/Ben Radford.jpg" class="imgstyle all sales" name="Ben Radford"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube=" Ben Radford .mp4" team="sales" />
+                <img src="static/images/sales/Christian Velroyen.jpg" class="imgstyle all sales" data-toggle="modal"
+                    data-target="#exampleModalCenter" youTube="Christian Velroyen intro.mp4" name="Christian  Velroyen"
+                    team="sales" />
+                <img src="static/images/sales/Davide Villa.jpg" class="imgstyle all sales" name="Davide Villa"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube=" Davide Villa.mp4" team="sales" />
+                <img src="static/images/sales/Egils Apsitis.jpg" class="imgstyle all sales" name="Egils Apsitis"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Eglis Apsitis.mp4" team="sales" />
+                <img src="static/images/sales/Florence Perrin.jpg" class="imgstyle all sales" name="Florence Perrin"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Florence Perrin.mp4" team="sales" />
+                <img src="static/images/sales/Frank Saelzer.jpg" class="imgstyle all sales" name="Frank Saelzer"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube=" Frank Saelzer.mp4" team="sales" />
+                <img src="static/images/sales/Ghassan Azzi.jpg" class="imgstyle all sales" name="Ghassan Azzi"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Ghassan Azzi.mp4" team="sales" />
+                <img src="static/images/sales/Jiri Olejnik.jpg" class="imgstyle all sales" name="Jiri Olejnik"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="JIRI OLEJNIK.mp4" team="sales" />
+                <img src="static/images/sales/Kai Frieben.jpg" class="imgstyle all sales" name="Kai Frieben"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Kai Frieben.mp4" team="sales" />
+                <img src="static/images/sales/Madars Danilevics.jpg" class="imgstyle all sales" name="Madars Danilevics"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube=" Madars Danilevics.mp4"
+                    team="sales" />
+                <img src="static/images/sales/Manfred Berger.jpg" class="imgstyle all sales" name="Manfred Berger"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Manfred Berger d.mp4" team="sales" />
+                <img src="static/images/sales/Marianne Daude.jpg" class="imgstyle all sales" name="Marianne Daude"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Marianne Daude  .mp4" team="sales" />
+                <img src="static/images/sales/Mario Bartnig.jpg" class="imgstyle all sales" name="Mario Bartnig"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube=" Mario.mp4" team="sales" />
+                <img src="static/images/sales/Mat Gasquy.jpg" class="imgstyle all sales" name="Mat Gasquy"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Mat Gasquy .mp4" team="sales" />
+                <img src="static/images/sales/Nicolas Frapard.jpg" class="imgstyle all sales" name="Nicolas Frapard"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Meeting with Nicolas Frapard.mp4"
+                    team="sales" />
+                <img src="static/images/sales/Nigel Edwards.jpg" class="imgstyle all sales" name="Nigel Edwards"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Nigel .mp4" team="sales" />
+                <img src="static/images/sales/Owais Mohammed.jpg" class="imgstyle all sales" name="Owais Mohammed"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="mohammed owais .mp4" team="sales" />
+                <img src="static/images/sales/Saif Khwaja.jpg" class="imgstyle all sales" name="Saif Khwaja"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube=" Saifuddin Khwaja .mp4"
+                    team="sales" />
+                <img src="static/images/sales/Tareq Hussein.jpg" class="imgstyle all sales" name="Tareq Hussein"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Tareq Husseini.mp4" team="sales" />
+                <img src="static/images/sales/Vineet Wadhwa.jpg" class="imgstyle all sales" name="Vineet Wadhwa"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Vineet Wadhwa.mp4" team="sales" />
+
+
+                <img src="static/images/usa/Andy Dorian.jpg" class="imgstyle all usa" name="Andy Dorian" team="usa"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="AndyDorian_BIO.mp4" />
+                <img src="static/images/usa/Colleen Crowley.jpg" class="imgstyle all usa" name="Colleen Crowley"
+                    data-toggle="modal" data-target="#exampleModalCenter"
+                    youTube="Colleen Crowley 1 Min Intro Video.mp4" team="usa" />
+                <img src="static/images/usa/Greg Kwolek.jpg" class="imgstyle all usa" name="Greg Kwolek" team="usa"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Greg Kwolek .mp4" />
+                <img src="static/images/usa/Jim Welsh.jpg" class="imgstyle all usa" name="Jim Welsh" team="usa"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="JimWelsh.mp4" />
+                <img src="static/images/usa/Kristy Morris.jpg" class="imgstyle all usa" name="Kristy Morris"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Kristy Morris .mp4" team="usa" />
+                <img src="static/images/usa/Kyle McElroy.jpg" class="imgstyle all usa" name="Kyle McElroy" team="usa"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Kyle McElroy bio.mp4" />
+                <img src="static/images/usa/Pascal De Boer.jpg" class="imgstyle all usa" name="Pascal De Boer"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="Pascal De .mp4" team="usa" />
+                <img src="static/images/usa/Rob Soderbery.jpg" class="imgstyle all usa" name="Rob Soderbery"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="RobSoderbery.mp4" team="usa" />
+                <img src="static/images/usa/Ryan Inouye.jpg" class="imgstyle all usa" name="Ryan Inouye" team="usa"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="RyN INOUYE.mp4" />
+                <img src="static/images/usa/Scott Davis.jpg" class="imgstyle all usa" name="Scott Davis" team="usa"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="ScottDavis_BIO.mp4" />
+                <img src="static/images/usa/Siva Sivaram.jpg" class="imgstyle all usa" name="Siva Sivaram" team="usa"
+                    data-toggle="modal" data-target="#exampleModalCenter" youTube="SivaSivaram.mp4" />
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close closeBtn" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">Close</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <video style="width: 100%;" controls disablePictureInPicture controlsList="nodownload" autoplay
+                    id="youTubePlayer">
+                    <source
+                        src="http://localhost:3000/DJ%20Virtual%20Events_Unminifed/files/assets/37623593/1/Consumer%20Audi-1.mp4"
+                        type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDGwwY2Dlyaay-XyoBh6ABIsUo4dpFS4L8",
+            authDomain: "westerndigitalv2-51ea3.firebaseapp.com",
+            databaseURL: "https://westerndigitalv2-51ea3.firebaseio.com",
+            projectId: "westerndigitalv2-51ea3",
+            storageBucket: "westerndigitalv2-51ea3.appspot.com",
+            messagingSenderId: "143064858071",
+            appId: "1:143064858071:web:03abe57b13062f87e7df92",
+            measurementId: "G-QSDHN2G7JK"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var rdb = firebase.database();
+        const auth = firebase.auth();
+        var your_name;
+        var your_email;
+        var your_id;
+        var profilePic;
+        var todayDate = GetDate();
+
+        var userMain;
+        var rdb_day;
+        var rdb_combin;
+        $(document).ready(function () {
+
+            auth.onAuthStateChanged(function (user) {
+                if (user) {
+                    userMain = user;
+                    your_name = user.displayName;
+                    your_email = user.email;
+                    your_id = user.uid;
+                    profilePic = user.photoURL;
+
+                    if (!your_name) {
+                        var email = user.email;
+                        var nameFromEmail = email.split("@")[0]
+                        your_name = nameFromEmail;
+
+                    }
+                    console.log(your_name);
+                    console.log(user.uid);
+
+                    rdb_day = rdb.ref('/LeaderBoardUserData/' + user.uid + '/' + todayDate +
+                        '/meetTheTeam/');
+                    rdb_combin = rdb.ref('/LeaderBoardUserData/' + user.uid + '/allData/meetTheTeam/');
+
+                } else {
+                    console.log("Nobody is Signed In");
+                }
+            });
+
+        });
+
+
+        function GetDate() {
+            var d = new Date();
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+                "October", "November", "December"
+            ];
+            let Today = d.getDate() + "-" + days[d.getDay()] + "-" + months[d.getMonth()] + "-2020";
+            return Today;
+        }
+    </script>
+
+
+    <script src="static/js/search.js"></script>
+    <!-- <script src="static/js/makeImages.js"></script> -->
+</body>
+
+</html>

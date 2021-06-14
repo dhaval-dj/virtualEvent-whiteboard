@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+    <meta charset='utf-8'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <style></style>
+    <title>InfiniteRunner V2 - WD</title>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+
+    <script src="playcanvas-stable.min.js"></script>
+    <script src="__settings__.js"></script>
+</head>
+<body>
+    <script src="__modules__.js"></script>
+    <script src="__start__.js"></script>
+    <script src="__loading__.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDGwwY2Dlyaay-XyoBh6ABIsUo4dpFS4L8",
+    authDomain: "westerndigitalv2-51ea3.firebaseapp.com",
+    databaseURL: "https://westerndigitalv2-51ea3.firebaseio.com",
+    projectId: "westerndigitalv2-51ea3",
+    storageBucket: "westerndigitalv2-51ea3.appspot.com",
+    messagingSenderId: "143064858071",
+    appId: "1:143064858071:web:03abe57b13062f87e7df92",
+    measurementId: "G-QSDHN2G7JK"
+        };
+        firebase.initializeApp(firebaseConfig);
+      
+        window.db = firebase.firestore();
+        window.auth = firebase.auth();  
+        window.rdb = firebase.database();
+         
+        
+    //    var rdb = firebase.database();  
+    </script>
+     <script src="main.js"></script>
+</body>
+</html>

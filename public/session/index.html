@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="statics/css/css.css">
+    <script src="statics/js/jquery.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="dateinfo">
+            DAY 1 - 10 November 2020
+        </div>
+
+        <div class="session-containner">
+            <lable class="slideo-name">Key Note Session pop up message</lable>
+            <div class="slido">
+                <input type="number" class="slido-Audi1-Input" id="session" placeholder="Enter Number">
+                <button class="saveBtn" onclick="updatesession()">Save</button>
+            </div>          
+        </div>
+
+
+       
+
+
+        <div class="session-containner" style="background-color: blueviolet;">           
+
+            <div class="sub-video-area">
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Audi Status</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="audi"
+                            placeholder="Enter Number">
+                        <button class="saveBtn" onclick="updateMainAudi()">Save</button>
+                    </div>
+                   
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Expo Hall Status</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="expohall"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateExpoHall()">Save</button>
+                    </div>
+
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Meeting Room Status </lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="meeting"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateMeetingRoom()">Save</button>
+                    </div>
+
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Work Shop Status</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="workshop"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateWorkshop()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 1 Jerry Kagele Executive : 1</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="jerry1"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateJerry1()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 2 Jerry Kagele Executive : 2</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="jerry2"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateJerry2()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 1 Scott Davis Executive Pink : 3</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="scott1"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateScott1()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 2 Scott Davis Executive Pink : 4</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="scott2"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateScott2()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 1 Jim Welsh Consumer Solutions : 5</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="jim1"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateJim1()">Save</button>
+                    </div>
+                </div>
+
+                
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 2 Jim Welsh Consumer Solutions : 6</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="jim2"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateJim2()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 1 Greg Kwolek Devices : 7</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="greg1"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateGreg1()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 2 Greg Kwolek Devices : 8</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="greg2"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateGreg2()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 1 Swapna Enterprise and platforms : 9</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="swapna1"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateSwapna1()">Save</button>
+                    </div>
+                </div>
+                
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 2 Swapna Enterprise and platforms : 10</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="swapna2"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateSwapna2()">Save</button>
+                    </div>
+                </div>
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 1 Ksirsty morris Marketing : 11</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="kristy1"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateKristy1()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 2 Ksirsty morris Marketing : 12</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="kristy2"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateKristy2()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 1 Ryan Inouye Operations : 13</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="ryan1"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateRyan1()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 2 Ryan Inouye Operations : 14</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="ryan2"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateRyan2()">Save</button>
+                    </div>
+                </div>
+                
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 1 Colleen Finance : 15 </lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="colleen1"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateColleen1()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 2 Colleen Finance : 16</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="colleen2"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateColleen2()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 1 Kyle Mcelroy Legal : 17</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="kyle1"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateKyle1()">Save</button>
+                    </div>
+                </div>
+
+                <div class="sub-video-video">
+                    <lable class="slideo-name">Room 2 Kyle Mcelroy Legal : 18</lable>
+                    <div class="slido">
+                        <input type="number" class="slido-Audi1-Input" id="kyle2"
+                            placeholder="Enter Number">
+                        <button class="azuca saveBtn" onclick="updateKyle2()">Save</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDGwwY2Dlyaay-XyoBh6ABIsUo4dpFS4L8",
+            authDomain: "westerndigitalv2-51ea3.firebaseapp.com",
+            databaseURL: "https://westerndigitalv2-51ea3.firebaseio.com",
+            projectId: "westerndigitalv2-51ea3",
+            storageBucket: "westerndigitalv2-51ea3.appspot.com",
+            messagingSenderId: "143064858071",
+            appId: "1:143064858071:web:03abe57b13062f87e7df92",
+            measurementId: "G-QSDHN2G7JK"
+        };
+        var app = firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="statics/js/day1.js"></script>
+
+</body>
+
+</html>

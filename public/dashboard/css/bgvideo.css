@@ -1,0 +1,27 @@
+.bgVideoContainer
+{
+    z-index: -100;
+    display: flex;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.main
+{
+    background: transparent;
+}
+
+#error
+{
+    font-family: Calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    color:#F14D4D;
+}

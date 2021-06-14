@@ -1,0 +1,63 @@
+
+.loginBox { position: fixed; right: 0; bottom: 0; z-index: 10; height: 60vh; width: 100%; background: #2D2D2D; }
+.loginBox__logo { background: #000000; }
+.loginBox__logo > img { max-width: 11.235294117647058rem; }
+.loginBox__avatars { list-style-type: none; display: flex; align-items: center; justify-content: space-between; }
+
+.loginBox .scrollable-part { height: calc(100% - 7.0675rem); overflow: auto; margin-top: 150px;}
+.loginBox .scrollable-part.scrollable-part__notitle { height: 100%; }
+
+.whitepX 
+{
+  color: #ffffff;
+  font-size: medium;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+.login-logo{
+  margin: auto;
+}
+
+.login-title{
+  text-align: center;
+}
+
+.form-inputs{
+  padding-left: 6rem;
+  padding-right: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-btn{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  color: #ffffff;
+  background-image: linear-gradient(to right, #07B8E0 , #5782D2);
+}
+
+/* Tablet */
+@media only screen and (min-width: 767px) {
+    .loginBox { top: 0; bottom: auto; width: 31rem; height: 100%; }
+    .has-login-box { padding-right: 31rem; }
+    .loginBox__logo > img { max-width: 18.9375rem; }
+   
+}
+
+@media only screen and (max-width: 767px) {
+  
+  .loginBox .scrollable-part { margin-top: -90px;}
+ 
+}
+
+
+/* Desktop */
+@media only screen and (min-width: 991px) {
+    .loginBox__logo > img { max-width: 18.9375rem; }
+  
+}
+
+
+

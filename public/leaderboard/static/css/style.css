@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-image: url(../images/bg.jpg);
+    background-size:cover ;
+  
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('../Fonts/CeraPRO-Medium_1.otf');
+  }
+
+.header{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.logo-image{
+    height: 500px
+}
+.logo-leaderboard{
+    height: 62px
+}
+
+.other-image{
+    max-width: 900px;
+    min-width: 900px;
+}
+
+
+.scoreboardbg{
+    background-image: url(../images/myscoreBoard.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 743px;
+    min-width: 743px;
+    height: 100px;
+    display: flex;
+ 
+}
+.scoreinputs{
+
+}
+
+.font{
+    color: black;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: fantasy;
+    margin: 20px;
+    display: flex;
+}
+
+.childItem{
+    font-size: 25px;
+    font-family: myFirstFont;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.myscore{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.rank1{
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    min-width: 900px;
+    margin: auto;
+}
+
+.rank2Title{
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    min-width: 900px;
+    margin: auto;
+}
+
+.rank3{
+    max-width: 900px;
+    min-width: 900px;
+    margin: auto;
+}
+
+.deiscription{
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    min-width: 900px;
+    margin: auto;
+}
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    padding: 8px;
+    border-right: 10px solid #000;
+  }
+  
+  .header-imaess{
+      background-repeat: no-repeat;
+      background-size: contain;
+      padding-top: 12px;
+    padding-bottom: 12px;
+    padding: 0px;
+    text-align: center;
+    border-right: 8px solid #000;
+  }
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+
+  }
+.bgFFF{
+    background-image: linear-gradient(to right, #5A80D1 , #07B8E0);
+    height: 50px;
+    border-bottom: 10px solid #000;
+}
+.topDownSpace{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+.wrap{
+    max-width: 900px;
+    min-width: 900px;
+    background-color: #000;
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+}
+.header-tr{
+    color: #fff;
+    background-image: linear-gradient(to right, #5A80D1 , #6550A5);
+}
+
+.header-title{
+    /* background-image: url(../images/leaderBoardTitlebar.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70px; */
+}
+
+.trElement{
+
+    padding: 10px;
+}
+
+.bgFF2F{
+    background-image: linear-gradient(to right, #FF3C5A , #FF9A0A);
+    height: 50px;
+    border-bottom: 10px solid #000;
+}

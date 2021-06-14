@@ -1,0 +1,7 @@
+first deploy app.yaml them dispatch.yaml
+
+gcloud app deploy --project virtualeventdemoblr
+
+gcloud app deploy dispatch.yaml --project virtualeventdemo(this is id)                // for updating the domain in service one time only
+
+

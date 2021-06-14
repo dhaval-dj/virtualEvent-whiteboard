@@ -1,0 +1,95 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+  
+body {
+    background-image: url('images/bg.png');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    /* background-color: black; */
+}
+
+#analyticsBox
+{
+   
+    clear: none;
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.analyticsBox1, .analyticsBox2, .analyticsBox3, .analyticsBox4, .analyticsBox5, .analyticsBox6, .analyticsBox7, .analyticsBox8,
+.analyticsBox9, .analyticsBox10, .analyticsBox11, .analyticsBox12, .analyticsBox13, .analyticsBox14, .analyticsBox15, .analyticsBox16 {
+    /* width: 20%;
+    height: 50%; */
+    width: 350px;
+    max-width: 350px;
+    height: 120px;
+    max-height: 120px;
+    /* width: 20%;
+    padding-right: 55px; */
+    background-image: url('images/box.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    /* justify-content: center; */
+
+    /* text-align: center; */
+    /* align-items: center; */
+   
+}
+
+.box{
+    display: flex;
+    /* justify-content: center; */
+    margin: 0 auto;
+    width: 75%;
+    /* text-align: center; */
+    align-items: center;
+}
+
+header {
+    background-image: url('images/header.png');
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    background-color: #777;
+    text-align: center;
+    color: white;
+    bottom: 0;
+}
+
+.p-text {
+    width: 40%;
+    font-size: 50px;
+    color: #2398CD;
+    display: inline-block;
+    text-align: right;
+}
+
+.p-text-head{
+    display: inline-block;
+    width: 60%;
+    font-size:1rem;
+    color: white;
+    text-align: left;
+    /* font-family: RionaSansW01-Regular; */
+}
+
+.btn {
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(7deg, #e6d9bc, #99802f);
+}

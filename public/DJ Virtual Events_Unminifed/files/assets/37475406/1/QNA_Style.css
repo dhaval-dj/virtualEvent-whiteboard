@@ -1,0 +1,47 @@
+.container-qna {
+position: absolute;
+    right: 6%;
+    bottom: -20px;
+}
+
+.iframe-css-qna{
+    border: none;
+    width: 498px;
+    height: 820px;
+}
+
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+.container-qna {
+position: absolute;
+    right: 6.5%;
+    bottom: 8px;
+}
+
+.iframe-css-qna{
+    border: none;
+    width: 284px;
+    height: 520px;
+}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+.container-qna {
+position: absolute;
+    right: 6%;
+    bottom: -20px;
+}
+
+.iframe-css-qna{
+    border: none;
+    width: 498px;
+    height: 820px;
+}
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="//db.onlinewebfonts.com/c/6caf4d27e271767286c1ddbf1a582b44?family=RionaSansW01-Regular" rel="stylesheet" type="text/css"/> -->
+    <title>AnalyticsDashboard</title>
+    <style>
+        @font-face {
+            font-family: aBeeZee;
+            src: url("fonts/ABeeZee-Regular.ttf");
+        }
+
+        body {
+            font-family: aBeeZee;
+        }
+
+        .analyticsBox_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+            justify-items: center;
+            margin: 10px 0px;
+        }
+
+        #analyticsBox {
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .header-title {
+            font-size: large;
+            color: #fff;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body onload="myFunction()">
+    <!-- <body> -->
+    <nav
+        style="background: linear-gradient(7deg, #000000, #000000);/* margin: auto 0; */display: flex;text-align: center;align-items: center;">
+        <img src="./images/logo.png" style="padding-left: 20px; width: 80px;">
+        <span style="
+        display: block;
+        color: #FFF;
+        font-size:large;
+        font-weight: 600;
+        padding: 20px;">Analytics Dashboard</span>
+
+        <a style="
+        display: block;
+        color: #FFF;
+        font-size:large;
+        font-weight: 600;        
+        padding: 20px;" href="/polldashboard/index.html">Home</a>
+
+    </nav>
+
+    <div id="analyticsBox">
+
+        <div class="header-title">
+            Sessions
+        </div>
+
+        <div class="analyticsBox_container">
+            <div class="analyticsBox16">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"WD Platform"</div>
+                    <div class="p-text" id="totalUser">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox1">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Lobby"</div>
+                    <div class="p-text" id="liveInLobby">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox6">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Workshop Lobby"</div>
+                    <div class="p-text" id="insideWorkshopLobby">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox6">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Expo Hall"</div>
+                    <div class="p-text" id="insideHall">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="analyticsBox_container">
+            <div class="analyticsBox2">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Keynotesessions"</div>
+                    <div class="p-text" id="insideAudi">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-title">
+            Workshops
+        </div>
+
+        <div class="analyticsBox_container">
+            <div class="analyticsBox3">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Workshop Client+"</div>
+                    <div class="p-text" id="insideClientPlus">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox4">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Workshop Gaming"</div>
+                    <div class="p-text" id="insideGaming">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox5">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Workshop Enterprise"</div>
+                    <div class="p-text" id="insideEnterprise">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox6">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Workshop Consumer"</div>
+                    <div class="p-text" id="insideConsumer">0</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="analyticsBox1"> -->
+
+
+        <div class="header-title">
+            Other
+        </div>
+
+        <div class="analyticsBox_container">
+            <div class="analyticsBox6">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Information Desk"</div>
+                    <div class="p-text" id="infodesk">0</div>
+                </div>
+            </div>
+
+            <div class="analyticsBox16">
+                <div class="box">
+                    <div class="p-text-head">Users live at<br>"Breakeout 1:1 Room"</div>
+                    <div class="p-text" id="gotoBreakeout">0</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header-title">
+            Expo Hall
+        </div>
+
+        <div class="analyticsBox_container">
+            <div class="analyticsBox8">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Client+"</div>
+                    <div class="p-text" id="Client">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox9">
+                <div class="box">
+                    <div class="p-text-head">Users live at<br>"Enterprise"</div>
+                    <div class="p-text" id="Enterprise">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox10">
+                <div class="box">
+                    <div class="p-text-head">Users live at<br>"NVMe and SSD"</div>
+                    <div class="p-text" id="NVMeandSSD">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox11">
+                <div class="box">
+                    <div class="p-text-head">Users live at<br>"Portable SSDs"</div>
+                    <div class="p-text" id="PortableSSDs">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox12">
+                <div class="box">
+                    <div class="p-text-head">Users live at<br>"Professional"</div>
+                    <div class="p-text" id="Professional">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox13">
+                <div class="box">
+                    <div class="p-text-head">Users live at<br>"Smart Video"</div>
+                    <div class="p-text" id="SmartVideo">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox14">
+                <div class="box">
+                    <div class="p-text-head">Users live at<br>"Western Digital Red for NAS"</div>
+                    <div class="p-text" id="WesternDigitalReadforNAS">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox15">
+                <div class="box">
+                    <div class="p-text-head">Users live at<br>"Work From Home"</div>
+                    <div class="p-text" id="WorkFromHome">0</div>
+                </div>
+            </div>
+
+            <div class="analyticsBox16">
+                <div class="box">
+                    <div class="p-text-head">Users live at<br>"Work On The Go"</div>
+                    <div class="p-text" id="WorkOnTheGo">0</div>
+                </div>
+            </div>
+
+            <div class="analyticsBox16">
+                <div class="box">
+                    <div class="p-text-head">Users live at<br>"Gaming"</div>
+                    <div class="p-text" id="Gaming">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-title">
+            1:1 Rooms
+        </div>
+
+        <div class="analyticsBox_container">
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Jerry Kagele & Nigel Edwards<br> Room 1"</div>
+                    <div class="p-text" id="liveInBO1">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Jerry Kagele & Nigel Edwards<br> Room 2"</div>
+                    <div class="p-text" id="liveInBO2">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Scott Davis<br> Room 1"</div>
+                    <div class="p-text" id="liveInBO3">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Scott Davis<br> Room 2"</div>
+                    <div class="p-text" id="liveInBO4">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Jim Welsh & Pascal De Boer<br> Room 1"</div>
+                    <div class="p-text" id="liveInBO5">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Jim Welsh & Pascal De Boer<br> Room 2"</div>
+                    <div class="p-text" id="liveInBO6">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Greg Kwolek & Fabrice Gellier<br> Room 1"</div>
+                    <div class="p-text" id="liveInBO7">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Greg Kwolek & Fabrice Gellier<br> Room 2"</div>
+                    <div class="p-text" id="liveInBO8">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Swapna Yasarapu/Andy Dorian & David VIlla<br> Room 1"
+                    </div>
+                    <div class="p-text" id="liveInBO9">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Swapna Yasarapu/Andy Dorian & David VIlla<br> Room 2"
+                    </div>
+                    <div class="p-text" id="liveInBO10">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Kristy Morris & Gerry Edwards<br> Room 1"</div>
+                    <div class="p-text" id="liveInBO11">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Kristy Morris & Gerry Edwards<br> Room 2"</div>
+                    <div class="p-text" id="liveInBO12">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Rayan Inouye & Yiannis Mesoloras<br> Room 1"</div>
+                    <div class="p-text" id="liveInBO13">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Rayan Inouye & Yiannis Mesoloras<br> Room 2"</div>
+                    <div class="p-text" id="liveInBO14">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Colleen Crowley & Peter Larkin<br> Room 1"</div>
+                    <div class="p-text" id="liveInBO15">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Colleen Crowley & Peter Larkin<br> Room 2"</div>
+                    <div class="p-text" id="liveInBO16">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Kyle McElroy & Anna Rosa Cosi<br> Room 1"</div>
+                    <div class="p-text" id="liveInBO17">0</div>
+                </div>
+            </div>
+            <div class="analyticsBox7">
+                <div class="box">
+                    <div class="p-text-head">Users live in<br>"Kyle McElroy & Anna Rosa Cosi<br> Room 2"</div>
+                    <div class="p-text" id="liveInBO18">0</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <!--     <div id="start" style="/* height: 100%; */text-align: center;justify-content: center; display: block;">
+
+    </div>
+    <nav
+        style="background: linear-gradient(7deg, #000000, #000000);/* margin: auto 0; */display: flex;text-align: center;align-items: center;bottom: 0;position: fixed;width: 100%;">
+ 
+        <span style="
+        display: block;
+        color: #FFF;
+        font-size: x-large;
+        font-weight: 600;
+        padding: 20px;"></span>
+    </nav> -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDGwwY2Dlyaay-XyoBh6ABIsUo4dpFS4L8",
+            authDomain: "westerndigitalv2-51ea3.firebaseapp.com",
+            databaseURL: "https://westerndigitalv2-51ea3.firebaseio.com",
+            projectId: "westerndigitalv2-51ea3",
+            storageBucket: "westerndigitalv2-51ea3.appspot.com",
+            messagingSenderId: "143064858071",
+            appId: "1:143064858071:web:03abe57b13062f87e7df92",
+            measurementId: "G-QSDHN2G7JK"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        firebase.auth();
+        firebase.database();
+    </script>
+
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>

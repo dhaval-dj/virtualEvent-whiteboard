@@ -1,0 +1,142 @@
+
+
+.container-chat{
+     position: absolute;
+    background-color: #000000c2;
+    color: #fff;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.iframe-css{
+    width:100%;
+    height:100%
+    
+}
+
+.counterBox{
+        width: 90%;
+    display: flex;
+   margin: auto;
+    height: 95vh;
+}
+.close {
+    width: 50px;
+    margin: 10px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("https://storage.googleapis.com/virtual-event-273009.appspot.com/close_button.png");
+    cursor: pointer;
+}
+
+.counterBox-poll{
+    
+}
+
+.iframe-css-poll{
+    width: 400px;
+    height: 600px;
+    border: none;
+    max-height: 600px;
+    border-radius: 10px;
+}
+.container-poll {
+  position: absolute;
+    bottom: 0px;
+    right: 5%;
+    width: 400px;
+}
+.iframe-css-poll body{
+    background-color: #ffffff70;
+}
+.close-btn-poll {
+     position: absolute;
+    width: 100px;
+    background-color: #ff000000;
+    top: 30px;
+    padding: 30px 0px;
+    right: 15px;
+    cursor: pointer;
+}
+
+
+.container-chat{
+     position: absolute;
+    background-color: #000000c2;
+    color: #fff;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.iframe-css{
+    width:100%;
+    height:100%
+    
+}
+
+.counterBox{
+        width: 90%;
+    display: flex;
+   margin: auto;
+    height: 95vh;
+}
+.close {
+    width: 50px;
+    margin: 10px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("https://storage.googleapis.com/virtual-event-273009.appspot.com/close_button.png");
+    cursor: pointer;
+}
+
+.counterBox-poll{
+    
+}
+
+.iframe-css-poll{
+    width: 400px;
+    height: 600px;
+    border: none;
+    max-height: 600px;
+    border-radius: 10px;
+}
+.container-poll {
+  position: absolute;
+    bottom: 0px;
+    right: 5%;
+    width: 400px;
+}
+.iframe-css-poll body{
+    background-color: #ffffff70;
+}
+.close-btn-poll {
+     position: absolute;
+    width: 100px;
+    background-color: #ff000000;
+    top: 30px;
+    padding: 30px 0px;
+    right: 15px;
+    cursor: pointer;
+}
+
+
+
+.container {
+    position: absolute;
+    background-color: #000000c2;
+    color: #fff;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+.comtainer iframe
+{
+    width: 50%;
+    hight: 50%;
+}

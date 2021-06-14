@@ -1,0 +1,175 @@
+body{
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+}
+
+.logo{
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 83px;
+    height: 66px;
+    margin: auto;
+}
+
+
+.admin-login-form{
+    margin: auto;
+    width: 400px;
+    background-color: #ddd;
+    padding: 25px;
+    box-shadow: inset 0.1px 1px 20px 0px #a7a7a7;
+}
+.admin-form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    padding: 20px;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+#email_id{
+    padding: 10px;
+    width: 100%;
+    margin: 20px;
+}
+
+#password{
+    padding: 10px;
+    width: 100%;
+    margin: 20px;
+}
+
+.ad-login{
+    padding: 10px;
+    width: 100%;
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+    background: #4CACE9;
+    text-align: center;
+}
+
+
+.admin-panel{
+    background-color: #dfdfdf45;
+    width: 600px;
+    margin:50px auto;
+    
+    padding: 50px;
+    display: flex;
+    box-shadow: 1px 1px 10px #88888859;
+    flex-direction: column;
+}
+
+.premium-member-title{
+    text-align: center;
+    padding: 10px;
+    background-color: azure;
+    font-size: 20px;
+}
+
+.event-time-setup{
+    padding: 10px;
+    border: 5px solid;
+    margin: 10px;
+}
+.event-manage{
+    padding: 10px;
+    border: 5px solid;
+    margin: 10px;
+}
+.sharelink{
+    padding: 10px;
+    border: 6px solid;
+    margin: 10px;
+}
+.shareableLink{
+    margin: 20px 0px;
+    padding: 5px;
+    box-shadow: inset 1px 1px 15px #bfbfbf;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.showCaptureButton{
+    padding: 20px;
+    margin: 30px 10px 10px;
+    background-color: #4CACE9;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.link-div{
+    flex-grow: 4;
+    margin: 10px;
+}
+.share-button{
+    color: white;
+    flex-grow: 1;
+    background-color: #4CACE9;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.input-link{
+    width: 100%;
+    height: 100%;
+}
+
+.date-time{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    align-items: center;
+}
+.submitEventTime{
+    background-color: #4CACE9;
+    padding: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.share-button-liveLink{
+    color: white;
+    flex-grow: 1;
+    
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.onAir{
+    background-color: rgb(255, 60, 0);
+}
+.startOnAir{
+    background-color: rgb(255, 153, 0);
+}
+
+.onEvent-time{
+    padding: 10px;
+    border: 6px solid;
+    margin: 10px;
+}
+
+.showEventEndButton{
+    padding: 20px;
+    margin: 30px 10px 10px;
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,204 @@
+/* changed */
+.stall-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000c2;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+
+.stall-box{
+    align-items: center;
+    height: 90%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-content: center;
+    padding: 3%;
+    
+}
+
+
+.stall-box-image{
+    height: 80%;
+    
+}
+
+.stall-box-video-tag{
+    height: 90%;
+    width: 100%;
+}
+
+.stall-image{
+    width: auto;
+    height: 90%;
+}
+
+.stall-video{
+    width: 90%;
+    height: 90%;
+}
+
+.counterBox{
+    width: 100% !important;
+    height: 100% !important;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.close{
+    width: 150px;
+    margin: 10px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("https://storage.googleapis.com/virtual-event-273009.appspot.com/PRAVEN/wd/cross.png");
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+}
+.close-ifram{
+    width: 120px;
+/*     margin: 10px; */
+    height: 120px;
+    
+    cursor: pointer;
+/*  To place donw    */
+    position: absolute;
+    top: 0;
+   margin-top:50px;
+    z-index:23;
+}
+.cross-image
+{
+    max-width:100%;
+    height:auto;
+}
+
+.counterBox .close
+{
+    position: absolute;
+}
+
+.iframe-css{
+    width:100%;
+    height:100%;
+    border: none;
+}
+
+
+/*  */
+
+
+/* Not known */
+.fullscreen-container{
+    position: absolute;
+    background-color: #000000c2;
+    color: #fff;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    visibility: hidden;
+}
+
+.image-container{
+    position: absolute;
+    background-color: #000000c2;
+    color: #fff;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.image-outer-div{
+    margin: 5% auto;
+    align-items: center;
+    height: 100%;
+}
+
+.appContainer{
+        width: 90%;
+    display: flex;
+   margin: auto;
+    height: 95vh;
+}
+
+.image-img{
+    width: auto;
+    height: 80%;
+    float: left;
+}
+
+.stall-box-img{
+    display: flex;
+    margin: 0px auto;
+    align-items: center;
+    height: 100%;
+}
+
+.youtube-outer-div{
+   margin: auto;
+    width: 60%;
+    height: 50%;
+}
+
+.pdf-outer-div{
+/*     margin: auto;
+    display: flex;
+    width: 70%;
+    height: 100%; */
+    width: 80% !important;
+    height: 80% !important;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.pdf-iframe{
+    height: 90%;
+    width: 90%;
+    float: left;
+    margin: auto;
+}
+
+.video-outer-div{
+margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video-frame{
+  height: 100%;
+    width: 90%;
+   
+}
+
+.chatboat-iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.chatboat-iframe-container{
+    width:500px;
+    height:600px;
+}
+
+.chatboat-close-btn{
+    width: 50px;
+    margin: 10px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(https://storage.googleapis.com/virtual-event-273009.appspot.com/PRAVEN/WDV2Nov/close.png);
+    cursor: pointer;
+    position: absolute;
+    right: -100px;
+    top: -5px;
+}
+/* --------------------------------------- */

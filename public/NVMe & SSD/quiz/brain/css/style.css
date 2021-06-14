@@ -1,0 +1,455 @@
+@font-face {
+	font-family: Cerapro-Black;
+	src: url('../../fonts/CeraPRO-Black.otf'); 
+  }
+  
+  @font-face {
+	font-family: Cerapro-Medium;
+	src: url('../../fonts/CeraPRO-Medium.otf'); 
+  }
+  
+  @font-face {
+	font-family: Cerapro-Bold;
+	src: url('../../fonts/CeraPRO-Bold.otf'); 
+  }
+/*-----------------------------------*\
+$ANIMATIONS
+\*-----------------------------------*/
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.animated.infinite {
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+@-webkit-keyframes shake {
+	from,
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		-webkit-transform: translate3d(-10px, 0, 0);
+		transform: translate3d(-10px, 0, 0);
+	}
+
+	20%,
+	40%,
+	60%,
+	80% {
+		-webkit-transform: translate3d(10px, 0, 0);
+		transform: translate3d(10px, 0, 0);
+	}
+}
+
+@keyframes shake {
+	from,
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		-webkit-transform: translate3d(-10px, 0, 0);
+		transform: translate3d(-10px, 0, 0);
+	}
+
+	20%,
+	40%,
+	60%,
+	80% {
+		-webkit-transform: translate3d(10px, 0, 0);
+		transform: translate3d(10px, 0, 0);
+	}
+}
+
+.shake {
+	-webkit-animation-name: shake;
+	animation-name: shake;
+}
+
+@-webkit-keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/*-----------------------------------*\
+$GENERAL STYLING
+\*-----------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.3s;
+	font-family: Cerapro-Medium, Cerapro-Bold;
+}
+
+.form-control:focus,
+.form-control:active {
+	outline: none !important;
+	box-shadow: none;
+}
+
+html,
+body {
+	height: 100%;
+	overflow: auto;
+}
+
+body {
+	background: #b993d6;
+	/* background: rgb(228, 228, 228);
+    background-image: url('../img/bg.jpg');
+    background-size: 125%; 
+    background-repeat: no-repeat;
+    background-position: center; */
+	background: linear-gradient(to bottom, #d5dee7 0%, #e8ebf2 50%, #e2e7ed 100%),
+		linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.02) 50%,
+			rgba(255, 255, 255, 0.02) 61%,
+			rgba(0, 0, 0, 0.02) 73%
+		),
+		linear-gradient(33deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+	background-blend-mode: normal, color-burn;
+}
+
+
+
+/*-----------------------------------*\
+$The Main Container
+\*-----------------------------------*/
+.welcometext
+{
+	padding:20px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	font-size:25px;
+}
+.container {
+	width: 560px; 
+	/* height: auto; */
+	/* height:100vh; */
+	padding: 0;
+	margin: auto;
+	color: #415868;
+	background: rgb(255, 255, 255);
+	margin-top: 340px;
+	border-radius: 35px; 
+}
+@media screen and (max-width: 2500px)
+{
+	.welcometext
+	{
+		padding:20px;
+		padding-top: 100px;
+		padding-bottom: 50px;
+		font-size:25px;
+	}
+	.container {
+		width: 720px; 
+		height: auto;
+		padding: 0;
+		margin: auto;
+		color: #415868;
+		background: rgb(255, 255, 255);
+		margin-top: 50px;
+		border-radius: 13px;
+		display: flex;		
+	}
+	.btn-next {
+		color: #ffff; 
+	   /* background: linear-gradient(to center, #c79b54 0%, #5882d0 100%); */
+	   background: linear-gradient(to right, #18b89f 0%, #499db3 50%, #5d80c0 100%);
+	   border-radius:10px !important;	
+	   position: absolute;	
+	   width: 25%;	
+	   font-size: 1.5em;
+	   height: 60px;
+	   border:0px;
+	   outline: none !important;
+	   box-shadow: none;
+	   /* border-bottom-left-radius: 7px;
+	   border-bottom-right-radius: 7px; */
+   }
+   .btn-next-parent
+   {
+	   display: flex;
+	   align-items: center;
+	   justify-content: center;
+	   overflow:auto;	
+	   padding-top: 60px;
+   
+   }
+}
+
+
+
+.btn-next.disabled, .btn-next:disabled {
+    opacity: .65;
+}
+.btn-next:focus, .btn-next:hover {
+    text-decoration: none;
+}
+.btn-next:not(:disabled):not(.disabled) {
+     cursor: pointer; 
+}
+
+/*-----------------------------------*\
+$QUESTION SECTIONS
+\*-----------------------------------*/
+section#theQuiz {
+	display: none;
+	background: rgb(255, 255, 255);
+	height: 100%;
+	width: 100%;
+	border-radius: 100%;
+}
+
+#quizForm {
+	position: relative;
+	background-color: transparent;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	padding: 30px;
+	padding-bottom: 70px;	
+}
+
+#quizForm h2 {
+	text-align: center;
+}
+
+/* question  */
+#quizForm p {
+	text-align: center;
+	/* font-weight: bold; */
+	font-size: 1.1em;
+	margin-top: -5px;
+	font-family: Cerapro-Bold;
+}
+
+#quizForm #tab .custom-radio {
+	margin-top: 10px;
+}
+
+#quizForm #tab label.custom-control-label {
+	width: 100%;
+	overflow: auto;
+}
+
+/* Make circles that indicate the steps of the form: */
+#quizForm .step {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbbbbb;
+	border: none;
+	border-radius: 50%;
+	display: inline-block;
+	opacity: 0.5;
+}
+
+#quizForm .step.active {
+	opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+#quizForm .step.finish {
+	opacity: 0.8;
+	background-color: #17a2b8;
+}
+
+.logo-partnersumit {     	
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;	
+}
+.center-logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}	
+ 
+.logo-partnersumit-img { 
+	 width: 100%;    
+	 margin: auto 0;  
+	
+}
+.logo-img-other { 
+    width: 400px;    
+	margin: auto 0; 
+	padding:10px 30px 	
+}
+/*-----------------------------------*\
+$RESULT SECTION
+\*-----------------------------------*/
+section#theResult {
+	display: none;
+	background: rgb(255, 255, 255);
+	border-radius: 30px;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+
+	margin: auto;
+	padding-bottom: 15vh; 
+	padding-top: 15vh; 
+	position: relative;
+	padding-left:50px;
+	padding-right: 50px;
+}
+
+#covid-message {
+    width: 80%;   
+	margin: auto; 
+	display: block;
+	padding-bottom: 2vh;
+	/* font-family: Cerapro-Medium;
+	font-size: 30px;
+	color: #333333;
+	line-height: 1;
+	text-align: center; */
+}
+#correctAns
+{
+	font-size: 26px;
+	color: #000000;
+	text-align: center;
+	font-family: Cerapro-Medium;
+}
+.circular-chart {
+	display: block;
+	margin: 10px auto;
+	max-width: 80%;
+	max-height: 250px;
+}
+
+.circle-bg {
+	fill: none;
+	stroke: #eee;
+	stroke-width: 3.8;
+}
+
+.circle {
+	fill: none;
+	stroke-width: 2.8;
+	stroke-linecap: round;
+	animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+	0% {
+		stroke-dasharray: 0 100;
+	}
+}
+
+.circular-chart.red .circle {
+	stroke: #ff0000;
+}
+
+.circular-chart.orange .circle {
+	stroke: #ff9f00;
+}
+
+.circular-chart.green .circle {
+	stroke: #4cc790;
+}
+
+.circular-chart.blue .circle {
+	stroke: #3c9ee5;
+}
+
+.circular-chart.teal .circle {
+	stroke: #008080;
+}
+
+#percentage {
+	fill: #666;
+	font-size: 0.5em;
+	text-anchor: middle;
+}
+
+/*-----------------------------------*\
+$RESPONSIVENESS
+\*-----------------------------------*/
+@media screen and (max-width: 768px) {
+	.container,
+	#username form {
+		width: 480px;
+		margin-top: 150px;
+	}
+	#username form i.material-icons {
+		font-size: 4.5em;
+	}
+
+	.btn-next {
+		color: #ffff; 	 
+	   background: linear-gradient(to right, #18b89f 0%, #499db3 50%, #5d80c0 100%);
+	   border-radius:10px !important;	
+	   position: absolute;	
+	   width: 50%;	
+	   font-size: 1.5em;
+	   height: 60px;
+	   border:0px;
+	   outline: none !important;
+	   box-shadow: none;
+	   /* border-bottom-left-radius: 7px;
+	   border-bottom-right-radius: 7px; */
+   }
+   .btn-next-parent
+   {
+	   display: flex;
+	   align-items: center;
+	   justify-content: center;
+	   overflow:auto;	
+	   padding-top: 50px;
+   
+   }
+   .welcometext
+   {
+	   padding:20px;
+	   padding-top: 100px;
+	   padding-bottom: 50px;
+	   font-size:25px;
+   }
+
+}
+@media screen and (max-width: 600px) {
+	.container,
+	#username form {
+		width: 320px;
+		margin-top: 50px;
+	}
+	#username form i.material-icons {
+		font-size: 4em;
+	}
+	#quizForm #tab label.custom-control-label {
+		border-bottom: 1px solid #ccc;
+	}
+	#correctAns
+	{
+		font-size: 16px;
+		color: #000000;
+		text-align: center;
+		font-family: Cerapro-Medium;
+	}
+}

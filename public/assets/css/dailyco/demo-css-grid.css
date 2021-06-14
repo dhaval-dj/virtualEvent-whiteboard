@@ -1,0 +1,1020 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+.daily-video-toplevel-div {
+  position: relative;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.daily-video-element {
+  object-fit: contain;
+}
+
+.daily-videos-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  padding: 10px;
+  overflow: hidden;
+  z-index: -5;
+}
+
+.daily-video-div {
+  position: relative;
+  visibility: hidden;
+  overflow: hidden;
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+/** ||| SCREEN SHARING ||| **/
+
+/** 1 person is sharing (show fullscreen) and no cameras**/
+/** Local screen on **/
+/**.daily-videos-wrapper.remote-screens-0.remote-cams-on-0.local-cam-muted > .daily-video-div.local.screen {
+  grid-area: 1 / 1 / span 3 / span 6;
+  visibility: visible !important;
+}**/
+
+/** Local screen off **/
+/**.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-0.local-cam-muted > .daily-video-div.remote.screen {
+  grid-area: 1 / 1 / span 3 / span 6;
+  visibility: visible !important;
+}**/
+
+/** 1 person is sharing (show partial screen) with cameras**/
+/** LOCAL SCREEN ON **/
+.daily-videos-wrapper.remote-screens-0 > .daily-video-div.local.screen {
+  grid-area: 1 / 1 / span 2 / span 6;
+  visibility: visible !important;
+}
+
+/** Local screen off **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]) > .daily-video-div.remote.screen {
+  grid-area: 1 / 1 / span 2 / span 6;
+  visibility: visible !important;
+}
+
+/** 1 person call **/
+/** Local camera on **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-0.local-cam-on > .daily-video-div.local.cam-on,
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-0.local-cam-on > .daily-video-div.local.cam-on {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+/** Local camera off **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-1.local-cam-muted > .daily-video-div.remote.cam-on,
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-1.local-cam-muted > .daily-video-div.remote.cam-on {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+/** 2-PERSON CALL **/
+/** Local camera on **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-1.local-cam-on > .daily-video-div.local.cam-on,
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-1.local-cam-on > .daily-video-div.local.cam-on {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-1.local-cam-on > .daily-video-div.remote.cam-on,
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-1.local-cam-on > .daily-video-div.remote.cam-on {
+  grid-area: 3 / 2 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+/** Local camera off **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-2.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-2.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-2.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-2.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 3 / 2 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+/** 3-PERSON CALL **/
+/** Local camera on **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-2.local-cam-on > .daily-video-div.local.cam-on,
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-2.local-cam-on > .daily-video-div.local.cam-on {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-2.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(3),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-2.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 3 / 2 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-2.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(4),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-2.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 3 / 3 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+/** Local camera off **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-3.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-3.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-3.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-3.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 3 / 2 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-3.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-3.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 3 / 3 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+/** 4-PERSON CALL **/
+/** Local camera on **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-3.local-cam-on > .daily-video-div.local.cam-on,
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-3.local-cam-on > .daily-video-div.local.cam-on {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-3.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(3),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-3.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 3 / 2 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-3.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(4),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-3.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 3 / 3 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-3.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(5),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-3.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 3 / 4 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+/** Local camera off **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-4.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-4.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-4.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-4.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 3 / 2 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-4.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-4.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 3 / 3 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-4.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-4.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 3 / 4 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+/** 5-PERSON CALL **/
+/** Local camera on **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-4.local-cam-on > .daily-video-div.local.cam-on,
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-4.local-cam-on > .daily-video-div.local.cam-on {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-4.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(3),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-4.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 3 / 2 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-4.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(4),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-4.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 3 / 3 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-4.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(5),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-4.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 3 / 4 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-4.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(6),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-4.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 3 / 5 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+/** Local camera off **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 3 / 2 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 3 / 3 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 3 / 4 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(6),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 3 / 5 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+/** 6-PERSON CALL **/
+/** Local camera on **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-5.local-cam-on > .daily-video-div.local.cam-on,
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-5.local-cam-on > .daily-video-div.local.cam-on {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(3),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 3 / 2 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(4),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 3 / 3 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(5),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 3 / 4 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(6),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 3 / 5 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(7),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(7) {
+  grid-area: 3 / 6 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+/** Local camera off **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 3 / 2 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 3 / 3 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 3 / 4 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(6),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 3 / 5 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(7),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(7) {
+  grid-area: 3 / 6 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+
+/** 7-PERSON CALL **/
+/** Local camera not shown **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 3 / 2 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 3 / 3 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 3 / 4 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(6),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 3 / 5 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(7),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(7) {
+  grid-area: 3 / 6 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+
+/** 8-PERSON CALL **/
+/** Local camera not shown **/
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 3 / 1 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 3 / 2 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 3 / 3 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 3 / 4 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(6),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 3 / 5 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-1:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(7),
+.daily-videos-wrapper.remote-screens-0.local-screen.remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(7) {
+  grid-area: 3 / 6 / span 1 / span 1;
+  visibility: visible !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/** ||| NOT SCREEN SHARING ||| **/
+
+/** 1 person call **/
+/** Local camera on **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-0.local-cam-on > .daily-video-div.local {
+  grid-area: 1 / 1 / span 3 / span 6;
+  visibility: visible !important;
+}
+
+/** Local camera off **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-1.local-cam-muted > .daily-video-div.remote.cam-on {
+  grid-area: 1 / 1 / span 3 / span 6;
+  visibility: visible !important;
+}
+
+/** 2-PERSON CALL **/
+/** Local camera on **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-1.local-cam-on > .daily-video-div.local {
+  grid-area: 1 / 1 / span 3 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-1.local-cam-on > .daily-video-div.remote.cam-on {
+  grid-area: 1 / 4 / span 3 / span 3;
+  visibility: visible !important;
+}
+
+/** Local camera off **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-2.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(1) {
+  grid-area: 1 / 1 / span 3 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-2.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 1 / span 3 / span 3 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-2.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 4 / span 3 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-2.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 4 / span 3 / span 3 !important;
+  visibility: visible !important;
+}
+
+
+/** 3-PERSON CALL **/
+/** Local camera on **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-2.local-cam-on > .daily-video-div.local {
+  grid-area: 1 / 1 / span 1 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-2.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 4 / span 1 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-2.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 2 / 1 / span 2 / span 6;
+  visibility: visible !important;
+}
+
+/** Local camera off **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-3.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(1) {
+  grid-area: 1 / 1 / span 1 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-3.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 1 / span 1 / span 3 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-3.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 4 / span 1 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-3.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 4 / span 1 / span 3 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-3.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 2 / 1 / span 2 / span 6;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-3.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 2 / 1 / span 2 / span 6 !important;
+  visibility: visible !important;
+}
+
+/** 4-PERSON CALL **/
+/** Local camera on **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-3.local-cam-on > .daily-video-div.local {
+  grid-area: 1 / 1 / span 1 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-3.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 4 / span 1 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-3.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 2 / 1 / span 2 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-3.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 2 / 4 / span 2 / span 3;
+  visibility: visible !important;
+}
+
+/** Local camera off **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(1) {
+  grid-area: 1 / 1 / span 1 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 1 / span 1 / span 3 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 4 / span 1 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 4 / span 1 / span 3 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 2 / 1 / span 2 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 2 / 1 / span 2 / span 3 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 2 / 4 / span 2 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 2 / 4 / span 2 / span 3 !important;
+  visibility: visible !important;
+}
+
+/** 5-PERSON CALL **/
+/** Local camera on **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-on > .daily-video-div.local {
+  grid-area: 1 / 1 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 3 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 5 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 2 / 1 / span 2 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-4.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 2 / 4 / span 2 / span 3;
+  visibility: visible !important;
+}
+
+/** Local camera off **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(1) {
+  grid-area: 1 / 1 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 1 / span 1 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 3 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 3 / span 1 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 5 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 1 / 5 / span 1 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 2 / 1 / span 2 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 2 / 1 / span 2 / span 3 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 2 / 4 / span 2 / span 3;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 2 / 4 / span 2 / span 3 !important;
+  visibility: visible !important;
+}
+
+/** 6-PERSON CALL **/
+/** Local camera on **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-on > .daily-video-div.local {
+  grid-area: 1 / 1 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 3 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 5 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 2 / 1 / span 2 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 2 / 3 / span 2 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-5.local-cam-on > .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 2 / 5 / span 2 / span 2;
+  visibility: visible !important;
+}
+
+/** Local camera off **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(1) {
+  grid-area: 1 / 1 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 1 / span 1 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 3 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 3 / span 1 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 5 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 1 / 5 / span 1 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 2 / 1 / span 2 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 2 / 1 / span 2 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 2 / 3 / span 2 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 2 / 3 / span 2 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 2 / 5 / span 2 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-6.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(7) {
+  grid-area: 2 / 5 / span 2 / span 2 !important;
+  visibility: visible !important;
+}
+
+
+/** 7-PERSON CALL **/
+/** Local camera not shown **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-7.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(1) {
+  grid-area: 1 / 1 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-7.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 1 / span 1 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-7.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 3 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-7.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 3 / span 1 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-7.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 5 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-7.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 1 / 5 / span 1 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-7.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 2 / 1 / span 2 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-7.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 2 / 1 / span 2 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-7.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 2 / 3 / span 2 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-7.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 2 / 3 / span 2 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-7.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 2 / 5 / span 2 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-7.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(7) {
+  grid-area: 2 / 5 / span 2 / span 2 !important;
+  visibility: visible !important;
+}
+
+
+/** 8-PERSON CALL **/
+/** Local camera not shown **/
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-8.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(1) {
+  grid-area: 1 / 1 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-8.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 1 / span 1 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-8.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(2) {
+  grid-area: 1 / 3 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-8.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 3 / span 1 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-8.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(3) {
+  grid-area: 1 / 5 / span 1 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-8.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 1 / 5 / span 1 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-8.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(4) {
+  grid-area: 2 / 1 / span 2 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-8.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 2 / 1 / span 2 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-8.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(5) {
+  grid-area: 2 / 3 / span 2 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-8.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 2 / 3 / span 2 / span 2 !important;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-8.local-cam-muted > .daily-video-div.remote.cam-on:nth-of-type(6) {
+  grid-area: 2 / 5 / span 2 / span 2;
+  visibility: visible !important;
+}
+
+.daily-videos-wrapper.remote-screens-0:not([class*="local-screen"]).remote-cams-on-8.local-cam-muted > .daily-video-div.local.cam-muted ~ .daily-video-div.remote.cam-on:nth-of-type(7) {
+  grid-area: 2 / 5 / span 2 / span 2 !important;
+  visibility: visible !important;
+}
+
+
+/** Overlay bar colors **/
+.daily-video-overlay {
+/**  padding-top: calc(100vh / var(--aspect-ratio));**/
+  z-index: 1;
+
+  position: absolute;
+  top: 100%;
+  text-align: center;
+  transform: translateY(-1.5em);/**translateY(calc(18vw/var(--aspect-ratio)));**/
+  visibility: hidden;
+}
+
+.test{
+  z-index: 1;
+  align-items: center;
+}
+
+.daily-video-overlay::after {
+  content: attr(data-user-name);
+  color: white;
+  background-color: #00000010;
+}
+
+/**.daily-video-overlay.local {
+  background-color: rgba(247, 178, 17, 0);
+}
+
+.daily-video-overlay.local.screen {
+  background: none;
+}
+
+.daily-video-div.remote:nth-child(2) .daily-video-overlay {
+  background-color: rgba(76, 217, 100, 0);
+}
+
+.daily-video-div.remote:nth-child(3) .daily-video-overlay {
+  background-color: rgba(69, 176, 255, 0);
+}
+
+.daily-video-div.remote:nth-child(4) .daily-video-overlay {
+  background-color: rgba(255, 59, 48, 0);
+}
+
+.daily-video-div.cam-muted::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.3) !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.daily-video-overlay.mic-muted::before {
+  content: var(data-user-name);
+  position: absolute;
+  background-image: url('/assets/images/icon-microphone-off.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 100%;
+  margin-left: 10px;
+}**/
+
+/**.show-names .daily-video-div::before {
+  font-family: "Lato", sans-serif;
+  content: attr(data-user-name);
+  position: absolute;
+  padding: 0.65em;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+}
+
+.info-div {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 1.5em;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  color: white;
+  padding: 0.625em;
+}
+
+.info-div .screen .low-bandwidth .info-div {
+  background-color: grey;
+}
+.low-bandwidth .info-div::after {
+  content: "32kb/s upstream video bandwidth cap";
+}
+
+.recording .info-div {
+  background-color: red;
+}
+.recording .info-div::after {
+  content: "recording";
+}
+.recording .info-div {
+  background-color: red;
+}
+.recording .info-div::after {
+  content: "recording ...";
+}
+.recording-uploading:not(.recording) .info-div {
+  background-color: green;
+}
+.recording-uploading:not(.recording) .info-div::after {
+  content: "uploading ...";
+}
+
+
+@media (max-width: 100px) {
+  .daily-videos-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .daily-videos-wrapper.remote-cams-1 > .daily-video-div.remote {
+    grid-area: 2;
+  }
+
+  .daily-videos-wrapper.remote-cams-2 > .daily-video-div.remote:nth-child(2) {
+    grid-area: 2;
+  }
+
+  .daily-videos-wrapper.remote-cams-2 > .daily-video-div.remote:nth-child(3) {
+    grid-area: 3;
+  }
+
+
+  .daily-videos-wrapper.remote-cams-3 > .daily-video-div.remote:nth-child(2) {
+    grid-area: 2;
+  }
+
+  .daily-videos-wrapper.remote-cams-3 > .daily-video-div.remote:nth-child(3) {
+    grid-area: 3;
+  }
+
+  .daily-videos-wrapper.remote-cams-3 > .daily-video-div.remote:nth-child(4) {
+    grid-area: 4;
+  }
+}**/

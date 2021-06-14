@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Agenda</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js" integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="assets/ar1.jpg" class="img-fluid" alt="">
+            </div>
+        </div>
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <div class="mx-auto">
+                    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><h2>DAY 1</h2></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><h2>DAY 2 & 3</h2></a>
+  </li>
+</ul>
+<hr>
+<div class="tab-content mt-5 mb-5" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <img src="assets/ar2.png" class="img-fluid mb-5" alt="">
+  </div>
+  <div class="tab-pane fade mt-5 mb-5" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <img src="assets/ar3.png" class="img-fluid mb-5" alt="">
+  </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.container -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+</body>
+<script type="text/javascript">
+$('#multiCollapseExample1').on('shown.bs.collapse', function() {
+    $('#multiCollapseExample2').collapse('hide')
+
+})
+
+$('#multiCollapseExample2').on('shown.bs.collapse', function() {
+    $('#multiCollapseExample1').collapse('hide')
+
+})
+</script>
+
+</html>

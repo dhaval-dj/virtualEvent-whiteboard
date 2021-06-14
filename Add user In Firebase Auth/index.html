@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Benz Admin</title>
+    <link rel="stylesheet" href="static/css/adminStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"></div>
+    </div>
+
+   
+
+    <div class="admin-panel" id="admin-panel" >
+        <div class="event-manage">
+            <div class="premium-member-title">
+                User Data Entry
+            </div>
+            <div class="shareableLink">
+                    <input type="text" id="u-name" class="input-link" placeholder="Name">
+                    <input type="text" id="u-mail" class="input-link" placeholder="Email">
+                    <input type="text" id="u-password" class="input-link" placeholder="Passowrd">
+                    <input type="text" id="room-name" class="input-link" placeholder="User Avatar">
+            </div>
+        </div>
+
+        <div class="showEventEndButton" id="Register">
+           Register
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+    <script src="static/js/admin.js"></script>
+</body>
+
+</html>

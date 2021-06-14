@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leader Board</title>
+    <link rel="stylesheet" href="static/css/style.css">
+
+
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <div class="header topDownSpace">
+            <img src="static/images/Titles.png" class="logo-image" alt="">
+        </div>
+
+        <div class="header topDownSpace">
+            <img src="static/images/leaderboard.png" class="logo-leaderboard" alt="">
+        </div>
+
+
+        <div class="myscore topDownSpace">
+
+            <div class="scoreboardbg">
+                <div class="scoreinputs font" style="margin-left: 80px;">
+                    <div class="childItem">YOUR RANK</div>
+                    <div id="point" class="childItem" style="color: #fff;margin-left: 45px;">.....</div>
+                </div>
+
+                <div class="scoreinputs font" style="margin-left: 105px;">
+                    <div class="childItem" style="margin-left: 20px;">YOUR POINTS</div>
+                    <div id="rank" class="childItem"
+                        style="color: #fff;margin-left: 40px;width: 60px;text-align: center;;">.....</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rank1 topDownSpace">
+            <!-- <img src="static/images/ranks.png" class="other-image" alt=""> -->
+
+            <table id="customers" style="color: #fff;width: 900px;">
+
+            </table>
+        </div>
+        <div class="rank2Title topDownSpace">
+            <img src="static/images/subtitle.png" style="height: 60px;" alt="">
+        </div>
+        <div class="rank3 topDownSpace">
+
+            <img src="static/images/Point Table.png" class="other-image" alt="">
+
+        </div>
+
+        <div class="rank3 topDownSpace">
+
+            <img src="static/images/winner Table.png" class="other-image" alt="">
+        </div>
+
+        <div class="deiscription topDownSpace">
+            <img src="static/images/description.png" class="other-image" alt="">
+        </div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-database.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-analytics.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDGwwY2Dlyaay-XyoBh6ABIsUo4dpFS4L8",
+            authDomain: "westerndigitalv2-51ea3.firebaseapp.com",
+            databaseURL: "https://westerndigitalv2-51ea3.firebaseio.com",
+            projectId: "westerndigitalv2-51ea3",
+            storageBucket: "westerndigitalv2-51ea3.appspot.com",
+            messagingSenderId: "143064858071",
+            appId: "1:143064858071:web:03abe57b13062f87e7df92",
+            measurementId: "G-QSDHN2G7JK"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        var rdb = firebase.database();
+        const db = firebase.firestore();
+        let uMail = '';
+        let userData;
+        let myCount = 1;
+
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+
+                userid = user.uid;
+                userData = user;
+                uMail = user.email;
+                console.log(uMail);
+                getUserData(userid);
+                getSortResult();
+                GetMyRank();
+            }
+        });
+
+        
+
+        function getUserData(userId) {
+            rdb.ref('/UserLeaderboardScorebord/' + userId).once('value', function (snapshot) {
+                document.getElementById('rank').innerHTML = snapshot.val().score;
+            });
+        }
+
+        var table = document.getElementById('customers');
+
+        let header = (
+            '<tr  style="height: 76px;"> <th class="header-imaess" style="background-image: url(static/images/rank1.png);"></th> <th class="header-imaess" style="background-image: url(static/images/name1.png);"></th> <th class="header-imaess" style="background-image: url(static/images/companyname.png);"></th><th class="header-imaess" style="background-image: url(static/images/points.png"></th></tr>'
+            );
+        const headerDom = stringToDom(header);
+
+
+
+        function stringToDom(html) {
+            const template = document.createElement('template');
+            template.innerHTML = html;
+            return template.content;
+        }
+
+        
+        function createRow(id, name, place, score) {
+            let a;
+
+            if (myCount > 5) {
+                a = '<tr class="bgFFF">';
+            } else {
+                a = '<tr class="bgFF2F">';
+            }
+
+            let b = '<td class="trElement" width="105px">#' + myCount + '</td>';
+            let c = '<td class="trElement" width="300px">' + name + '</td>';
+            let d = '<td class="trElement" width="350px">' + place + '</td>';
+            let e = '<td class="trElement" width="155px"  style="border-right: 15px;">' + score + '</td>';
+            let f = '</tr>';
+            myCount++;
+            return (a + b + c + d + e + f);
+        }
+        table.innerHTML = '';
+
+        // table.append(stringToDom(createRow(1,'ppj','BLR',345)));
+        // table.append(stringToDom(createRow(2,'ppj','BLR',345)));
+
+
+        let userRanks = [];
+        let ii = 1;
+
+        function getSortResult() {
+            const query = rdb.ref('UserLeaderboardScorebord')
+                .orderByChild('score').limitToLast(15);
+            userRanks = [];
+            query.once('value', function (snapshot) {
+
+                snapshot.forEach(function (childSnapshot) {
+                    var childKey = childSnapshot.key;
+                    var childData = childSnapshot.val();
+                    userRanks.push(childData);
+                    //console.log(childSnapshot,childKey,childData);
+                });
+                userRanks.reverse();
+                ii = 1;
+                table.append(headerDom);
+                DisplayRankList();
+
+            });
+        }
+
+
+        function DisplayRankList() {          
+            if (userRanks.length > 0) {
+                // console.log(userData[0]);
+                var indexToRemove = 0;
+                var numberToRemove = 1;
+                GetData(userRanks[0].uid, userRanks[0].score, ii);
+                ii++;
+                userRanks.splice(indexToRemove, numberToRemove);
+                // console.log(userData.length);
+
+            } else {
+                console.log('Done Finished')
+                return;
+            }
+        }
+
+        function GetData(key, score, rank) {
+
+            console.log(key, score, rank);
+            var docRef = db.collection("users").doc(key);
+            docRef.get().then(function (doc) {
+                if (doc.exists) {
+                    //  console.log("Document data:", doc.data());
+
+                    table.append(stringToDom(createRow(rank, doc.data().name, doc.data().company, score)));
+
+
+                    DisplayRankList();
+                } else {
+                    // doc.data() will be undefined in this case
+                    DisplayRankList();
+                    console.log("No such document!");
+                }
+            }).catch(function (error) {
+                console.log("Error getting document:", error);
+            });
+        }
+
+        let getRankLis = [];
+
+        function GetMyRank() {
+            const query = rdb.ref('UserLeaderboardScorebord').orderByChild('score');
+            query.once('value', function (snapshot) {
+
+                getRankLis = [];
+                snapshot.forEach(function (childSnapshot) {
+                    var childKey = childSnapshot.key;
+                    var childData = childSnapshot.val();
+                    getRankLis.push(childKey);
+                });
+
+                getRankLis.reverse();
+                let r = getRankLis.indexOf(userData.uid);
+                console.log(getRankLis);
+                document.getElementById('point').innerHTML = (r + 1);
+
+            });
+        }
+    </script>
+
+    <script src="static/js/jquery-3.5.1.min.js"></script>
+
+</body>
+
+</html>

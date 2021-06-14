@@ -1,0 +1,19 @@
+.videoBox { position: relative; height: 100%; z-index: 1; transition: all 0.3s; }
+.videoBox.menu-active { height: calc(100% - 50vh); }
+
+.canvasBox { height: 100%; width: 100%; }
+
+/* Video Buttons */
+.fast-backward-btn, .fast-forward-btn { display: block; position: absolute; right: 10px; top: 50%; z-index: 3; margin-top: -1.125rem; height: 3rem; width: 4.5rem; border: medium none; background: url('../images/button-arrows/forward-btn.png') center center no-repeat; background-size: 100% 100%; }
+.fast-backward-btn { right: auto; left: 10px; background-image: url('../images/button-arrows/backward-btn.png'); }
+.fullscreen-btn {  position: absolute; right: 0px; bottom: 0px; z-index: 3; padding: 1rem; color: #fff; font-size: 1.5rem; line-height: 1.4rem; text-decoration: none; display: block; border: medium none; background: transparent; }
+.fast-backward-btn:focus, .fast-forward-btn:focus, .fullscreen-btn:focus { outline: none; background-color: rgba(0,0,0,0.05); }
+
+/* Tablet */
+@media only screen and (min-width: 767px) {
+    .videoBox, .videoBox.menu-active { height: 100vh; }
+    .videoBox.menu-active { margin-right: 17.875rem; }
+}
+
+/* Desktop */
+@media only screen and (min-width: 991px) {}

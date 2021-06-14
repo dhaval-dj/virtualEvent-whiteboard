@@ -1,0 +1,436 @@
+
+.control:hover {
+    opacity: 0.4;
+}
+
+.icon-camera
+{ 
+    background: url(/assets/images/dailyco/icon-camera.svg) no-repeat;
+}
+.icon-cameraV2
+{ 
+    background: url(/assets/images/dailyco/icon-cameraV2.svg) no-repeat;
+}
+
+
+.icon-microphone
+{
+    background: url(/assets/images/dailyco/icon-microphone.svg) no-repeat;
+}
+.icon-microphoneV2
+{
+    background: url(/assets/images/dailyco/icon-microphoneV2.svg) no-repeat;
+}
+
+
+.icon-screenshare
+{
+    background: url(/assets/images/dailyco/icon-screenshare.svg) no-repeat;
+}
+.icon-eject
+{
+    background: url(/assets/images/dailyco/icon-eject.svg) no-repeat;
+}
+.icon-close
+{
+    background: url(/assets/images/dailyco/close.svg) no-repeat;
+}
+
+.icon-endCall
+{
+    background: url(/assets/images/dailyco/icon-endCall.svg) no-repeat;
+}
+
+.accessButton
+{
+    background-color: rgb(0, 119, 255);
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: large;
+    border: 0;
+    border-radius: 40px;
+    
+}
+
+.accessButton-requested
+{
+    background-color: rgb(52, 52, 52);
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: large;
+    border: 0;
+    border-radius: 40px;
+    opacity: 0.4;
+}
+
+.rejoinButton
+{
+    background-color: rgb(0, 119, 255);
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: large;
+    border: 0;
+    border-radius: 40px;
+    width: 200px;
+}
+
+.videoConference-section { 
+    padding: 1% 5%; 
+    max-height: 85%;
+}
+
+.videoConference-section .control
+{
+    /* padding: 11%; */
+    margin: 6%;
+    width: 75%;
+}
+
+
+.participantBadge 
+{
+    /* width: 30%;
+    height: 15%; */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(51, 51, 51);
+    border-radius: 1rem;
+    margin: 2%;
+    padding: 2%;
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+/* 
+.participantBadge:hover
+{
+    background-color: rgba(46, 46, 46, 0.507);
+    
+} */
+
+.participantImage
+{
+    border-radius: 50%;
+    width: 65%;
+    height: 65%;
+    padding: 2%;
+    margin: 6% auto;
+}
+
+.participantImageAdmin
+{
+    border-radius: 50%;
+    width: 65%;
+    height: 65%;
+    padding: 2%;
+    margin: 6% auto;
+
+    /* margin: 3% auto; */
+}
+
+.participantName
+{
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.participantControls
+{
+    background-color: #222222e0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    width: 100%; 
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    /* margin: 2%;
+    padding: 2%; */
+    
+}
+
+.notification
+{
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    padding: 8px 10px;
+    border-radius: 30px;
+    background-color: white;
+    color: white;
+    width: 20%;
+    height: 25%;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+}
+
+.notification-hide
+{
+    display: none;
+}
+
+.notification-blue
+{
+    background-color: rgb(5, 163, 255) !important;
+}
+
+.notification-green
+{
+    background-color: rgb(0, 185, 93) !important;
+}
+
+.notification-yellow
+{
+    background-color: #ffc939 !important;
+}
+
+
+.uiMessgaes
+{
+    color: white;
+    text-align: left;
+    margin: 12%;
+    font-size: 1.1rem;
+}
+
+
+.red-image {
+    filter: brightness(0) saturate(100%) invert(35%) sepia(86%) saturate(2913%) hue-rotate(329deg) brightness(98%) contrast(100%);
+}
+
+.yellow-image {
+    filter: brightness(0) saturate(100%) invert(83%) sepia(27%) saturate(1170%) hue-rotate(343deg) brightness(100%) contrast(102%);
+}
+
+.green-image {
+    filter: brightness(0) saturate(100%) invert(89%) sepia(50%) saturate(471%) hue-rotate(67deg) brightness(83%) contrast(87%);
+}
+
+.white-image {
+    filter: none;
+}
+
+.blue-image {
+    filter: brightness(0) saturate(100%) invert(71%) sepia(53%) saturate(6957%) hue-rotate(198deg) brightness(99%) contrast(103%);
+}
+
+.video-swal-modal {
+    font-family: "Montserrat", sans-serif;
+    background-color: white !important;
+    border: 1px solid #656565;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21) !important;
+    color: #000;
+    border-radius: 10px;
+    width: 30%;
+}
+
+
+.video-swal-modal .swal-title {
+    margin: 0px;
+    font-size: 14px;
+    margin-bottom: 28px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0) !important;
+    color: #000;
+  }
+
+/* over rideing the exisitong one */
+  .Toastify__toast--default {
+    background-color: rgb(51, 51, 51) !important;
+    color: white !important;
+}
+.Toastify__close-button--default {
+    color: white !important;
+    opacity: 0.5 !important;
+}
+.Toastify__toast-container--top-center {
+    width: 60% !important;
+}
+#player
+{
+    background-color: black;
+}
+
+.videoConference-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow: auto;
+    /* height: calc(70%); */
+}
+.participantBadge 
+{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 1rem;
+    margin: 2%;
+    padding: 2%;
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+
+
+#controlsParent
+{
+    background-color: #191919;
+    width: 100%;
+    height: 13%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#basicControls
+{
+    background-color: #333232;
+    border-radius: 38px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 70%;
+    width: 70%;
+}
+
+
+.contolBox
+{
+    width: 80%;
+    height: 80%;
+    display: flex;    
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent; 
+}
+
+.titleButtonMenu
+{
+    display: flex !important;   
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+#endCallForAll
+{
+    width: 80%;
+    height: 80%;
+}
+
+
+.participantBadge-user
+{
+    width: 100%;
+    height: 100%;
+}
+
+.EndAllCallButton
+{
+    color: white;
+    width: 128px;
+    height: 40px;
+    left: 1299px;
+    top: 15px;
+    background: #000000;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.DailycoTitleMenu
+{
+    padding: 1rem 0 !important;
+}
+
+
+@media only screen and (min-width: 2560px) {
+    #controlsParent
+    {
+        height: 6%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .videoConference-section {  
+        max-height: 90%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #controlsParent
+    {
+        height: 22%;
+    }
+
+    .contolBox img
+    {
+        width: 80%;
+    }
+    .videoConference-section { 
+        max-height: 65%;
+    }
+    .DailycoTitleMenu
+    {
+        padding: 1.25rem 0 !important;
+    }
+
+    .video-swal-modal {
+        width: 80%;
+    }
+    
+
+}
+
+@media only screen and (max-width: 485px) {
+    #controlsParent
+    {
+        height: 22%;
+    }
+
+    .contolBox img
+    {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .participantBadge 
+    {
+        width: 90px;
+        height: 90px;
+    }
+
+    #controlsParent
+    {
+        height: 22%;
+    }
+
+    .contolBox img
+    {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .participantBadge 
+    {
+        width: 80px;
+        height: 80px;
+    }
+}

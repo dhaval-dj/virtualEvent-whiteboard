@@ -1,0 +1,143 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ @font-face {
+    font-family: 'Cera Pro';
+    src: url('fonts/CeraPro-Light.eot');
+    src: url('fonts/CeraPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/CeraPro-Light.woff2') format('woff2'),
+        url('fonts/CeraPro-Light.woff') format('woff'),
+        url('fonts/CeraPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('fonts/CeraPro-Medium.eot');
+    src: url('fonts/CeraPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/CeraPro-Medium.woff2') format('woff2'),
+        url('fonts/CeraPro-Medium.woff') format('woff'),
+        url('fonts/CeraPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('fonts/CeraPro-Black.eot');
+    src: url('fonts/CeraPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('fonts/CeraPro-Black.woff2') format('woff2'),
+        url('fonts/CeraPro-Black.woff') format('woff'),
+        url('fonts/CeraPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('fonts/CeraPro-Regular.eot');
+    src: url('fonts/CeraPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/CeraPro-Regular.woff2') format('woff2'),
+        url('fonts/CeraPro-Regular.woff') format('woff'),
+        url('fonts/CeraPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.btn-img {
+	height: 30px;
+}
+.container {
+	border-right: 1px solid #dedede;
+	border-left: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+}
+body {
+	font-family: "Cera Pro";
+	color: #000;
+}
+.thin {
+	font-weight: 300;
+}
+p {
+	line-height: 1.6rem;
+	font-size: 18px;
+	text-align: justify;
+}
+h2 {
+	font-weight: 500;
+}
+h3{
+	font-weight: 500;
+	font-size: 32px;
+}
+a {
+    color: #676767;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #00bea0;
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 3rem;
+}
+.nav-pills .nav-link {
+    border-radius: 0rem;
+}
+.top-img{
+	background: url(/assets/ar1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 500px;
+}
+
+.wd-logo {
+	width: 200px;
+	margin-right: 50px;
+}
+
+.mid{
+	background-color: #fff;
+	min-height: 120px;
+	width: 90%;
+	margin-top: -30px;
+	border-radius: 8px 0px 0px 8px;
+	-webkit-box-shadow: -3px 3px 3px 0px rgba(0,0,0,0.21);
+-moz-box-shadow: -3px 3px 3px 0px rgba(0,0,0,0.21);
+box-shadow: -3px 3px 3px 0px rgba(0,0,0,0.21);
+}
+
+.c-box {
+	width: 450px;
+	border-bottom: 7px solid #ee7c40;
+	height: 100%;
+	padding: 20px 0px;
+	margin-left: 20px;
+}
+
+.content {
+	width: 80%;
+}
+
+.port{
+	width: 100%;
+	padding: 20px;
+}
+.tphd{
+	margin-left: 100px;
+}
+
+@media (max-width: 576px) { 
+.c-box {
+	width: auto;
+}
+.content {
+	width: 95%;
+}
+.tphd{
+	margin-left: 0px;
+}
+}

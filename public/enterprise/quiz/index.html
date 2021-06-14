@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		/>
+		<!-- Google Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Custom Style Sheet -->
+		<link rel="stylesheet" href="brain/css/style.css" />
+		<title>Quiz !</title>
+		<link rel="icon" type="image/png" href="brain/img/favicon.png" />
+		<style>
+			.h-5-p {
+				/* height: 5% !important; */
+				margin-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body style="background-image: url(image/bgland.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover; background-color: black;">
+		<div class="logo-partnersumit">		
+				<img class="logo-partnersumit-img" src="image/aa.png">			
+			<!-- <div><img class="logo-partnersumit" src="image/all.png"></div> -->			
+		</div>      
+
+	
+		<!-- </div> -->
+		<div class="container box-shadow">	
+			
+			<!-- start page -->
+		<div id="firstpage">
+				<div id="quizForm">	
+					<h2 class="welcometext">A warm welcome to Western Digital Quizone. Happy Quizing!</h2>
+					<div  class="btn-next-parent">												
+						<!-- <button type="button" class="btn-next "	 onclick="startQuiz();analytics();">Play Now</button>		 -->
+						<button type="button" class="btn-next "	 onclick="startQuiz();">START</button>				
+					</div>
+				</div>
+		</div>
+		
+			<!-- end of start page -->
+			
+
+			<!-- Quiz Starts Here -->
+			<section id="theQuiz">
+				<form id="quizForm" onsubmit="return false;">				
+					<div id="steps" style="text-align:center;">						
+					</div>
+					<hr />
+					<!-- One "tab" for each step in the form: -->
+					<div id="tab">
+						<p id="que">---Question---</p>
+						<hr />
+						<div class="custom-control custom-radio" id="radio1">
+							<input
+								type="radio" id="opt1"	name="q" class="custom-control-input" onclick="enableBtn(this)"
+								value="1"
+							/>
+							<label
+								class="custom-control-label"
+								onclick="var id = this.previousElementSibling.id; this.setAttribute('for', id)"
+								>---Option 1---</label
+							>
+						</div>
+						<div class="custom-control custom-radio" id="radio2">
+							<input
+								type="radio"
+								id="opt2"
+								name="q"
+								class="custom-control-input"
+								onclick="enableBtn(this)"
+								value="2"
+							/>
+							<label
+								class="custom-control-label"
+								onclick="var id = this.previousElementSibling.id; this.setAttribute('for', id)"
+								>---Option 2---</label
+							>
+						</div>
+						<div class="custom-control custom-radio" id="radio3">
+							<input
+								type="radio"
+								id="opt3"
+								name="q"
+								class="custom-control-input"
+								onclick="enableBtn(this)"
+								value="3"
+							/>
+							<label
+								class="custom-control-label"
+								onclick="var id = this.previousElementSibling.id; this.setAttribute('for', id)"
+								>---Option 3---</label
+							>
+						</div>
+						<div class="custom-control custom-radio" id="radio4">
+							<input
+								type="radio"
+								id="opt4"
+								name="q"
+								class="custom-control-input"
+								onclick="enableBtn(this)"
+								value="4"
+							/>
+							<label
+								class="custom-control-label"
+								onclick="var id = this.previousElementSibling.id; this.setAttribute('for', id)"
+								>---Option 4---</label
+							>
+						</div>	
+					</div>
+					<div class="btn-next-parent">												
+							<button 
+								type="button" disabled="disabled" class="btn-next mb-2"	id="next-button" onclick="next();"							>
+								NEXT
+							</button>					
+					</div>
+				</form>
+			</section>
+
+			<!-- The Result -->
+			<section id="theResult">			
+				<br />				
+				<h2 id="resultFb" style="font-weight: bold;"></h2>			
+				<div> 
+					<!-- <img id="covid-message" src="image/congratulations.png" alt="covid-message">  -->
+				</div>
+				<h3 id="correctAns"></h3>	
+				<div style="width: 100%;"> 
+				<div style="padding-top:15px;">
+					<h5>Your Points will be added to the leader board. Thanks for joining us at Quizone. Hope you had a great time!</h5>
+				</div>
+				</div>			
+			</section>
+		</div>
+		<!-- Container End -->
+	
+	<!-- <footer style="padding-top: 25px;position: absolute;bottom: 0;">
+		
+		<img src="image/footer.jpg" alt="Exercise 1" style="width: 100%;">
+	</footer> -->
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="brain/js/questions.js"></script>		
+
+	<!-- Fire base connectivity -->
+
+	<script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-analytics.js"></script>
+
+	<script>
+		var firebaseConfig = {
+			apiKey: "AIzaSyDGwwY2Dlyaay-XyoBh6ABIsUo4dpFS4L8",
+			authDomain: "westerndigitalv2-51ea3.firebaseapp.com",
+			databaseURL: "https://westerndigitalv2-51ea3.firebaseio.com",
+			projectId: "westerndigitalv2-51ea3",
+			storageBucket: "westerndigitalv2-51ea3.appspot.com",
+			messagingSenderId: "143064858071",
+			appId: "1:143064858071:web:03abe57b13062f87e7df92",
+			measurementId: "G-QSDHN2G7JK"
+		};
+		firebase.initializeApp(firebaseConfig);
+		const auth = firebase.auth();
+		var rdb = firebase.database();
+		const rdbx = firebase.database();
+
+		var stallName = 'Enterprise';
+		var actionName = 'QuizGame';
+		var scoreSave = 'PlayerScore';
+		var watchList;
+		var saveLiveDataToLeaderboard;
+		var saveLiveDataToLeaderboardDay;
+		var userid;
+
+		firebase.auth().onAuthStateChanged(function (user) {
+			if (user) {
+				userid = user.uid;
+				watchList = rdbx.ref('/user_analytics_wd_' + stallName + '/' + userid);
+				 saveLiveDataToLeaderboardDay= window.rdb.ref('/LeaderBoardUserData/' + userid + '/' + GetDate() + '/' +
+					stallName + '/');
+				saveLiveDataToLeaderboard = window.rdb.ref('/LeaderBoardUserData/' + userid + '/allData/' + actionName + '/');
+				analytics();
+			}
+		});
+
+		//const analytics = firebase.analytics();
+		//OuterIndex
+		function analytics() {
+
+			watchList.once('value').then(function (snapshot) {
+				var currentData = (snapshot.val());
+				if (currentData != null) {
+					if (currentData[actionName]) {
+						//Last Entry
+						let addOne = currentData[`NoOfTry` + actionName];
+						addOne = addOne + 1;
+						watchList.update({
+							[`lastEntryTime` + actionName]: firebase.database.ServerValue.TIMESTAMP,
+							[`NoOfTry` + actionName]: addOne,
+						});
+					} else {
+						//First Entry
+						watchList.update({
+							[actionName]: true,
+							[`firstEntryTime` + actionName]: firebase.database.ServerValue.TIMESTAMP,
+							[`NoOfTry` + actionName]: 1,
+						});
+					}
+				} else {
+					watchList.update({
+						[actionName]: true,
+						[`firstEntryTime` + actionName]: firebase.database.ServerValue.TIMESTAMP,
+						[`NoOfTry` + actionName]: 1,
+					});
+				}
+			});
+
+		}
+
+		function SaveUserScore(score) {
+			watchList.update({
+				[actionName + 'HighestScore']: score,
+			});
+		}
+
+		function SaveLederboard() {
+			
+			saveLiveDataToLeaderboardDay.update({
+				[actionName]: true,
+			});
+			saveLiveDataToLeaderboard.update({
+				[stallName]: true,
+			});
+		}
+
+		function GetDate() {
+			var d = new Date();
+			var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+			var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+				"November", "December"
+			];
+			let Today = d.getDate() + "-" + days[d.getDay()] + "-" + months[d.getMonth()] + "-2020";
+			return Today;
+		}
+	</script>
+	 <script src="brain/js/main.js"></script>
+	<script src="brain/js/script.js"></script>
+	</body>
+</html>

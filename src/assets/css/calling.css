@@ -1,0 +1,21 @@
+.callingBox { display: flex; flex-direction: column; position: relative; height: 100%; width: 100%; z-index: 1; transition: all 0.3s; }
+.callingBox__video { width: 100%; height: 100%; position: relative; }
+.callingBox__nameTag { padding: 10px 15px; position: absolute; left: 0; top: 0; background: #000000; color: #ffffff; display: block; }
+
+.callingBox__buttons { padding: 1rem 0; position: absolute; left: 0; bottom: 0; list-style-type: none; width: 100%; display: flex; align-items: center; justify-content: space-evenly; }
+.callingBox__buttons > li {  }
+.callingBox__buttons > li > .icon-btn { color: #fff; position: relative; z-index: 0; text-decoration: none; border: 2px solid #fff; font-size: 3.5rem; border-radius: 50%; transition: all 0.3s; }
+.callingBox__buttons > li > .icon-btn:after, 
+.callingBox__buttons > li > .icon-btn:before { display: none; position: absolute; left: 0; top: 0; z-index: -1; height: 100%; width: 100%; content: ""; border-radius: 50%; transition: all 0.3s; background: linear-gradient(0deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.13)), rgba(255, 255, 255, 0.13); }
+.callingBox__buttons > li > .icon-btn:focus { background: #fff; color: #5BB796; border-color: #5BB796; outline: none; }
+.callingBox__buttons > li > .icon-btn:focus:after { transform: scale(1.5,1.5); display: block; z-index: -1; }
+.callingBox__buttons > li > .icon-btn:focus:before { transform: scale(2,2); display: block; z-index: -2; }
+
+
+/* Tablet */
+@media only screen and (min-width: 767px) {
+    .callingBox { flex-direction: row; }
+}
+
+/* Desktop */
+@media only screen and (min-width: 991px) {}

@@ -1,0 +1,111 @@
+body{
+    background-color: #C0BCB5;
+    margin: 0;
+    padding: 0;
+}
+
+
+.loginBg{
+  background-image: url(../images/loginBg.png);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.normalUserHome{
+    background-image: url(../images/userHome.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.registration-form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background: #fff;
+    height: 100%;
+    padding: 20px;
+}
+.reg-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-form input{
+    padding: 10px 0px;
+    margin: 10px 0px;
+    
+}
+
+.reg-form button{
+    padding: 15px;
+    margin: 10px 0px;
+    background-color: #4CACE9;
+    border: none;
+}
+
+.adminpanel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.showsnapshot{
+    padding: 10px;
+    margin: 20px;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.mmeting{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.meetuser{
+    padding: 10px;    
+    margin: 10px;
+    cursor: pointer;
+}
+
+.nonActiveUser{
+    background-color:#cda432;
+}
+
+.nonActiveUser:hover{
+    background-color:#f1c037;
+}
+
+
+.activeUser{
+    background-color:#32cd47;
+}
+
+
+.activeUser:hover{
+    background-color:#289737;
+}
+
+.eventStartTime{
+    color: white;
+    font-size: 30px;
+    margin-top: 170px;
+    padding: 20px;
+}
+
+.capture-button{
+    background-image: url(../images/capture.png);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 100px;
+    margin-top: 200px;
+    cursor: pointer;
+}
